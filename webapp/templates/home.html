@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block mycont %}
+
+<p><h1>Hello {{user.name}}</h1></p>
+<p><h3><i>Recent posts is:</i></h3></p>
+
+{% for post in posts %}
+<ul>
+	<li style="text-align:center; font-family:verdana; color:green;">{{post.author.name}} said {{post.body.text}} at {{post.body.time}}</li>
+</ul>
+{% endfor %}
+{% endblock %}
